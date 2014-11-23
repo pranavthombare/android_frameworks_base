@@ -388,6 +388,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     int[] mAbsPos = new int[2];
     ArrayList<Runnable> mPostCollapseRunnables = new ArrayList<>();
 
+    private boolean mDoubleTabSleep;
+
     // for disabling the status bar
     int mDisabled1 = 0;
     int mDisabled2 = 0;
@@ -466,6 +468,16 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     };
 
 
+
+        void observe() {
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE),
+                    false, this, UserHandle.USER_ALL);
+
+            update();
+        }
+
+
     final private ContentObserver mNavBarObserver = new ContentObserver(mHandler) {
         @Override
         public void onChange(boolean selfChange) {
@@ -479,6 +491,13 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 if (mAssistManager != null) {
                     mAssistManager.onConfigurationChanged();
                 }
+            }
+
+            mDoubleTabSleep = Settings.System.getIntForUser(
+                    mContext.getContentResolver(), Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0, mCurrentUserId) == 1;
+
+            if (mStatusBarWindow != null) {
+                mStatusBarWindow.setDoubleTabSleep(mDoubleTabSleep);
             }
         }
     };
