@@ -3611,10 +3611,18 @@ public final class Settings {
          * 4 - Voice search
          * 5 - In-app search
          * 6 - Launch Camera
-         * 7 - Laucnh last app
+         * 7 - Launch last app
+        /**
+         * Whether to wake the screen with the volume keys, the value is boolean
          * @hide
          */
         public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
+
+		 /*
+         * Whether or not volume button music controls should be enabled to seek media tracks
+         * @hide
+         */
+        public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
 
         /**
          * Action to perform when the home key is double-tapped.
