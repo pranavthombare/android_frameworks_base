@@ -3587,6 +3587,7 @@ public final class Settings {
         public static final String NAVIGATION_BAR_ENABLED = "navigation_bar_enabled";
 
         /**
+         
          * Value for button brightness.
          * This is an integer value in a range between 0 and 255.
          *      0 = off
@@ -3605,6 +3606,7 @@ public final class Settings {
         public static final String BUTTON_BRIGHTNESS_ENABLED = "button_brightness_enabled";
 
         /**
+
 
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -3763,6 +3765,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(NAVIGATION_BAR_ENABLED);
             PRIVATE_SETTINGS.add(BUTTON_BRIGHTNESS);
             PRIVATE_SETTINGS.add(BUTTON_BRIGHTNESS_ENABLED);
+
         }
 
         /**
