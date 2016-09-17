@@ -2504,6 +2504,20 @@
     <!-- Default files to pin via Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
     </string-array>
+    
+    <!-- Minimum screen brightness setting allowed by the power manager.
+     The user is forbidden from setting the brightness below this level. -->
+    <integer name="config_buttonBrightnessSettingMinimum">10</integer>
+    
+    <!-- Maximum button brightness allowed by the power manager.
+     The user is forbidden from setting the brightness above this level. -->
+    <integer name="config_buttonBrightnessSettingMaximum">255</integer>
+    
+    <!-- Default button brightness setting.
+     Must be in the range specified by minimum and maximum. -->
+    <integer name="config_buttonBrightnessSettingDefault">255</integer>
+    
+
 
     <!-- True if camera app should be pinned via Pinner Service -->
     <bool name="config_pinnerCameraApp">false</bool>
