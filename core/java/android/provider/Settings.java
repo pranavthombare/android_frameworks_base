@@ -3589,9 +3589,18 @@ public final class Settings {
          * Whether user can enable/disable button brightness.
          * <p>
          * Type: int (0 for false, 1 for true)
+         /**
+         * whether to enable torch on lockscreen
          * @hide
          */
         public static final String BUTTON_BRIGHTNESS_ENABLED = "button_brightness_enabled";
+         
+		 /*
+         * Enable statusbar double tap gesture on to put device to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+
 
         /**
          * Whether user can swap navigation lateral keys.
