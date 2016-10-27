@@ -2695,6 +2695,7 @@
 
   <java-symbol type="drawable" name="ic_restart" />
 
+
   <!-- Button Brightness -->
   <java-symbol type="integer" name="config_buttonBrightnessSettingMinimum" />
   <java-symbol type="integer" name="config_buttonBrightnessSettingMaximum" />
@@ -2714,4 +2715,12 @@
   <java-symbol type="integer" name="config_longPressOnHardwareAssistBehavior" />
   <java-symbol type="integer" name="config_longPressOnHardwareAppSwitchBehavior" />
   <java-symbol type="integer" name="config_longPressOnHardwareCameraBehavior" />
+
+  <!-- config softap extention feature -->
+  <java-symbol type="bool" name="config_softap_extention" />
+
+  <!-- Snapchat Hack -->
+  <java-symbol type="array" name="apps_with_opaque_hack" />
+
+
 </resources>
