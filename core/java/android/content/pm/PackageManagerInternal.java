@@ -160,6 +160,8 @@ public abstract class PackageManagerInternal {
      * Returns {@code true} if a given package can't be wiped. Otherwise, returns {@code false}.
      */
 
+    public abstract boolean isPackageDataProtected(int userId, String packageName);
+
     public abstract boolean canPackageBeWiped(int userId, String packageName);
 
     /**
@@ -186,3 +188,4 @@ public abstract class PackageManagerInternal {
      */
     public abstract void setResourceDirs(int userId, String packageName, String[] resourceDirs);
 
+}
