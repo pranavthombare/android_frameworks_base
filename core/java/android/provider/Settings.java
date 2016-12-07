@@ -3729,12 +3729,7 @@ public final class Settings {
          */
         public static final String SCREENSHOT_CROP_BEHAVIOR = "screenshot_crop_behavior";
 
-        /**
-         * Whether or not volume button music controls should be enabled to seek media tracks
-         * @hide
-         */
-        public static final String VOLUME_ROCKER_MUSIC_CONTROLS = "volume_rocker_music_controls";
-
+       
        /**
          * Network traffic indicator, goes from least to greatest significant bitwise
          * 0 = Display up-stream traffic if set
