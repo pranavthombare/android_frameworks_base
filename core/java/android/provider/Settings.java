@@ -3717,18 +3717,6 @@ public final class Settings {
             }
         };
 
-        /**
-         * Define if screenshot crop & share is active
-         * @hide
-         */
-        public static final String SCREENSHOT_CROP_AND_SHARE = "screenshot_crop_and_share";
-
-        /**
-         * Define the crop behavior of screenshot crop & share
-         * @hide
-         */
-        public static final String SCREENSHOT_CROP_BEHAVIOR = "screenshot_crop_behavior";
-
        
        /**
          * Network traffic indicator, goes from least to greatest significant bitwise
@@ -3759,6 +3747,7 @@ public final class Settings {
         public static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
 
         /**
+
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
