@@ -162,7 +162,6 @@ public abstract class PackageManagerInternal {
 
     public abstract boolean isPackageDataProtected(int userId, String packageName);
 
-    public abstract boolean canPackageBeWiped(int userId, String packageName);
 
     /**
      * Get all overlay packages for a user.
