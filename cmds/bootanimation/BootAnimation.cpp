@@ -73,9 +73,7 @@
 
 namespace android {
 
-static const char OEM_BOOTANIMATION_FILE[] = "/oem/media/bootanimation.zip";
-static const char SYSTEM_BOOTANIMATION_FILE[] = "/system/media/bootanimation.zip";
-static const char SYSTEM_ENCRYPTED_BOOTANIMATION_FILE[] = "/system/media/bootanimation-encrypted.zip";
+
 static const char SYSTEM_DATA_DIR_PATH[] = "/data/system";
 static const char SYSTEM_TIME_DIR_NAME[] = "time";
 static const char SYSTEM_TIME_DIR_PATH[] = "/data/system/time";
@@ -85,7 +83,6 @@ static const char ACCURATE_TIME_FLAG_FILE_NAME[] = "time_is_accurate";
 static const char ACCURATE_TIME_FLAG_FILE_PATH[] = "/data/system/time/time_is_accurate";
 // Java timestamp format. Don't show the clock if the date is before 2000-01-01 00:00:00.
 static const long long ACCURATE_TIME_EPOCH = 946684800000;
-static const char EXIT_PROP_NAME[] = "service.bootanim.exit";
 static const char PLAY_SOUND_PROP_NAME[] = "persist.sys.bootanim.play_sound";
 static const int ANIM_ENTRY_NAME_MAX = 256;
 static const char BOOT_COMPLETED_PROP_NAME[] = "sys.boot_completed";
