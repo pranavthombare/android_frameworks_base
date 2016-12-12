@@ -3641,12 +3641,6 @@ public final class Settings {
          * (See KEY_HOME_LONG_PRESS_ACTION for valid values)
          * @hide
          */
-        public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
-
-        /**
-         * Change volume up and down handlign based on rotation
-         * @hide
-         */
         public static final String KEY_MENU_LONG_PRESS_ACTION = "key_menu_long_press_action";
 
         /**
