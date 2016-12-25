@@ -753,11 +753,6 @@ Asset* AssetManager::openIdmapLocked(const struct asset_path& ap) const
 }
 
 
-#ifndef _WIN32
-    TEMP_FAILURE_RETRY(flock(fileno(fin), LOCK_UN));
-#endif
-    fclose(fin);
-}
 
 const ResTable& AssetManager::getResources(bool required) const
 {
