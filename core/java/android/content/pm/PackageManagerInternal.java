@@ -160,7 +160,7 @@ public abstract class PackageManagerInternal {
      * Returns {@code true} if a given package can't be wiped. Otherwise, returns {@code false}.
      */
 
-    public abstract boolean isPackageDataProtected(int userId, String packageName);
+    public abstract boolean canPackageDataProtected(int userId, String packageName);
 
 
 
