@@ -4623,15 +4623,13 @@ public class ConnectivityService extends IConnectivityManager.Stub
      */
     private void updateCapabilities(
             int oldScore, NetworkAgentInfo nai, NetworkCapabilities networkCapabilities) {
-<<<<<<< HEAD
-=======
+
         if (nai.everConnected && !nai.networkCapabilities.equalImmutableCapabilities(
                 networkCapabilities)) {
             Slog.wtf(TAG, "BUG: " + nai + " changed immutable capabilities: "
                     + nai.networkCapabilities + " -> " + networkCapabilities);
         }
 
->>>>>>> android-7.1.1_r6
         // Don't modify caller's NetworkCapabilities.
         networkCapabilities = new NetworkCapabilities(networkCapabilities);
         if (nai.lastValidated) {
@@ -4644,21 +4642,7 @@ public class ConnectivityService extends IConnectivityManager.Stub
         } else {
             networkCapabilities.removeCapability(NET_CAPABILITY_CAPTIVE_PORTAL);
         }
-<<<<<<< HEAD
-        if (!Objects.equals(nai.networkCapabilities, networkCapabilities)) {
-            if (nai.networkCapabilities.hasCapability(NET_CAPABILITY_NOT_RESTRICTED) !=
-                    networkCapabilities.hasCapability(NET_CAPABILITY_NOT_RESTRICTED)) {
-                try {
-                    mNetd.setNetworkPermission(nai.network.netId,
-                            networkCapabilities.hasCapability(NET_CAPABILITY_NOT_RESTRICTED) ?
-                                    null : NetworkManagementService.PERMISSION_SYSTEM);
-                } catch (RemoteException e) {
-                    loge("Exception in setNetworkPermission: " + e);
-                }
-            }
-            synchronized (nai) {
-                nai.networkCapabilities = networkCapabilities;
-=======
+
         if (nai.isBackgroundNetwork()) {
             networkCapabilities.removeCapability(NET_CAPABILITY_FOREGROUND);
         } else {
@@ -4674,7 +4658,6 @@ public class ConnectivityService extends IConnectivityManager.Stub
                 mNetd.setNetworkPermission(nai.network.netId, newPermission);
             } catch (RemoteException e) {
                 loge("Exception in setNetworkPermission: " + e);
->>>>>>> android-7.1.1_r6
             }
         }
 

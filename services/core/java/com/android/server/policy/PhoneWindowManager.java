@@ -3775,7 +3775,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
         final boolean down = action == KeyEvent.ACTION_DOWN;
         final boolean up = action == KeyEvent.ACTION_UP;
-
+        int keyCode = event.getKeyCode();
         final boolean canceled = event.isCanceled();
         final boolean fromSystem = (flags & KeyEvent.FLAG_FROM_SYSTEM) != 0;
         final boolean longPress = (flags & KeyEvent.FLAG_LONG_PRESS) != 0;
@@ -3795,7 +3795,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         final boolean interactive = (policyFlags & FLAG_INTERACTIVE) != 0;
         final boolean isInjected = (policyFlags & WindowManagerPolicy.FLAG_INJECTED) != 0;
 
-        int keyCode = event.getKeyCode();
+
 
 
         if (DEBUG_INPUT) {
